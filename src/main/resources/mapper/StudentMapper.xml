@@ -5,7 +5,12 @@
 
     <!-- 分页查询学生课程成绩 -->
     <select id="selectStudentCourseScorePage" resultType="com.example.demo1.vo.StudentCourseScoreVO">
-        SELECT s.name, c.course_name, sc.score
+        SELECT
+        s.student_id,    -- 学生编号
+        s.name,          -- 学生姓名
+        s.age,           -- 学生年龄
+        c.course_name,   -- 课程名称
+        sc.score         -- 考试分数
         FROM student s
         LEFT JOIN sc ON s.student_id = sc.student_id
         LEFT JOIN course c ON sc.course_id = c.course_id

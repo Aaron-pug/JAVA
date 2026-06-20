@@ -13,6 +13,7 @@ import java.util.List;
 
 @Service
 // implements：实现接口
+// 继承 MyBatis-Plus 提供的通用业务实现父类 ServiceImpl
 public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> implements StudentService {
     @Override
     public IPage<StudentCourseScoreVO> getStudentCourseScorePage(int pageNum, int pageSize){

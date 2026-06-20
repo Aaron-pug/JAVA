@@ -28,6 +28,7 @@ public class StudentController {
 
     @GetMapping("/scores/page")  //本质是 @RequestMapping(method = RequestMethod.GET)
     public IPage<StudentCourseScoreVO> getStudentCourseScorePage
+    // IPage 是 MyBatis-Plus 官方提供的分页顶层接口，专门用来承载分页查询的全部信息。
             (@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10") int pageSize){
         return studentService.getStudentCourseScorePage(pageNum,pageSize);
     }

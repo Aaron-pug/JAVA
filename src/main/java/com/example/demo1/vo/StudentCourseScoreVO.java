@@ -4,7 +4,9 @@ import lombok.Data;
 
 @Data
 public class StudentCourseScoreVO {
-    private String name;       // 学生姓名（来自student表）
-    private String courseName; // 课程名（来自course表）
-    private Double score;      // 分数（来自sc表）
+    private Integer studentId;   // 学生编号
+    private String name;         // 学生姓名
+    private Integer age;         // 学生年龄
+    private String courseName;   // 课程名
+    private Integer score;       // 分数
 }
