@@ -12,6 +12,9 @@ import java.util.List;
 //@Controller：交给 Spring 管理，接收 web 请求
 //@ResponseBody：方法返回值自动序列化为 JSON，直接返回给前端
 
+@CrossOrigin(origins = "*")
+//允许其他端口 / 域名的前端页面访问我下面的所有接口，不要拦截。
+
 @RequestMapping("/student")
 //写在类上：只匹配「整个控制器」，是给内部所有方法加公共路径前缀，不单独绑定接口；
 //写在方法上：才是直接和当前这个方法绑定完整访问 URL。
